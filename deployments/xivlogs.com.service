@@ -1,0 +1,13 @@
+[Unit]
+Description=xivlogs.com service
+
+[Service]
+ExecStart=/root/.nvm/versions/node/v6.9.1/bin/node /opt/nodesvcs/xivlogs.com/index.js
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=xivlogs
+
+[Install]
+WantedBy=multi-user.target
